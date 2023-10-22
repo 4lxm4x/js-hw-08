@@ -3,6 +3,7 @@ import _ from 'lodash';
 const formElement = document.querySelector('form');
 const emailElement = document.querySelector('input');
 const msgElement = document.querySelector('textarea');
+<<<<<<< HEAD
 
 const localStorageContent = localStorage.getItem('feedback-form-state');
 
@@ -13,6 +14,9 @@ if (localStorageContent) {
   msgElement.value = message;
 } else {
   console.log('empty storage');
+=======
+
+>>>>>>> 2883a89c1ca5371fa9926c6a889cad86b724fdbf
 }
 formElement.addEventListener('input', _.throttle(onFormInput, 500));
 formElement.addEventListener('submit', onSubmit);
