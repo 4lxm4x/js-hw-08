@@ -1,10 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-//import * as basicLightbox from "basicLightbox.min.js";
-// Change code below this line
-
-//console.log(galleryItems);
 
 const gallery = document.querySelector('.gallery');
 createGallery();
@@ -24,26 +20,8 @@ function createGallery() {
   });
 }
 
-gallery.addEventListener('click', onGalleryItemClick);
 const lightbox = new SimpleLightbox('.gallery a', {
-  /* options */ captionsData: 'alt',
+  captionsData: 'alt',
   captionDelay: 250,
 });
 console.log(lightbox);
-function onGalleryItemClick(event) {
-  event.preventDefault();
-  //const link = event.target.dataset.source;
-  // console.dir(event.target);
-  //   if (event.target.nodeName !== "IMG") {
-  //     return;
-  //   }
-
-  //   function onEscPressed(event) {
-  //     if (event.code === "Escape") {
-  //       instance.close();
-  //       document.removeEventListener("keydown", onEscPressed);
-  //     }
-  //     console.log(event.code);
-  //     console.log(instance.visible());
-  //   }
-}
