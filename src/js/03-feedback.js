@@ -1,4 +1,4 @@
-import throttle from 'lodash';
+import throttle from 'lodash/throttle';
 
 const formElement = document.querySelector('form');
 const emailElement = document.querySelector('input');
@@ -12,7 +12,7 @@ if (localStorageContent) {
   emailElement.value = email;
   msgElement.value = message;
 }
-formElement.addEventListener('input', _.throttle(onFormInput, 500));
+formElement.addEventListener('input', throttle(onFormInput, 500));
 formElement.addEventListener('submit', onSubmit);
 
 function onFormInput() {
